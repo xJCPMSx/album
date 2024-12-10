@@ -142,34 +142,36 @@ body {
   -webkit-transform: rotateX(90deg);
 }
 
+/* Alteração para criar o coração */
 .cat-mark {
   position: relative;
-  width: 200px;
-  height: 170px;
-  background: #333;
-  border-radius: 60% 60% 90px 90px;
-  margin: 150px auto auto;
+  width: 100px; /* Ajuste proporcional ao tamanho */
+  height: 100px; /* Altura igual para um coração equilibrado */
+  background: #e63946; /* Cor vermelha */
+  margin: 150px auto;
+  transform: rotate(-45deg); /* Inclinar para criar a base do coração */
 }
+
 .cat-mark:before,
 .cat-mark:after {
-  top: -25px;
-  width: 0;
-  height: 0;
-  border-bottom: 80px solid #333;
-  border-right: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-radius: 33px;
+  content: "";
+  position: absolute;
+  width: 100px; /* Largura igual à altura do corpo principal */
+  height: 100px; /* Altura igual para círculos */
+  background: #e63946;
+  border-radius: 50%; /* Criar as curvas superiores do coração */
 }
+
 .cat-mark:before {
-  right: -20px;
-  transform: rotate(32deg);
-  -webkit-transform: rotate(32deg);
+  top: -50px; /* Ajustar para alinhar à borda superior */
+  left: 0; /* Mantém alinhado ao lado esquerdo */
 }
+
 .cat-mark:after {
-  left: -20px;
-  transform: rotate(-32deg);
-  -webkit-transform: rotate(-32deg);
+  top: 0; /* Mantém alinhado à borda superior */
+  left: 50px; /* Ajuste para alinhar à borda direita */
 }
+
 
 .top-content {
   display: flex;
